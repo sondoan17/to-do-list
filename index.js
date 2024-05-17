@@ -18,8 +18,11 @@ function addNewItem() {
   tableLastRow.lastChild.id = id; //  gán id cho thẻ tr vừa thêm
   document.getElementById(id).innerText = id; //  nhập id
   tableLastRow.appendChild(tdElement1);
-  var contentValueElement = document.querySelector("table").lastChild.lastChild;
-  contentValueElement.innerText = getValue(); // nhập nội dung lấy từ ô input
+  var contentInput = document.createElement("textarea");
+  contentInput.readOnly = true;
+  var editable = contentInput.readOnly;
+  document.querySelector("table").lastChild.lastChild.appendChild(contentInput);
+  contentInput.innerText = getValue(); // nhập nội dung lấy từ ô input
   tableLastRow.appendChild(tdElement2);
   var actionValueElement = document.querySelector("table").lastChild.lastChild;
   var actionButtonElement1 = document.createElement("button");
@@ -36,6 +39,11 @@ function addNewItem() {
   });
   actionButtonElement2.innerText = "Edit"; // tạo nút chỉnh sửa
   actionValueElement.appendChild(actionButtonElement2);
+
+  document
+    .querySelector("table")
+    .lastChild.lastChild.lastChild.classList.add("editButton");
+  actionButtonElement2.addEventListener("click", toggleEdit);
   actionButtonElement3.innerText = "Done"; // tạo nút hoàn thành
   actionValueElement.appendChild(actionButtonElement3);
 }
@@ -54,4 +62,7 @@ saveButtonElement.addEventListener("click", saveValue);
 function deleteRow(event) {
   var row = event.target.parentNode.parentNode;
   row.parentNode.removeChild(row);
+}
+function toggleEdit(event) {
+
 }
