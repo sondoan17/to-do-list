@@ -1,3 +1,11 @@
-table, tr, td {
-    border: 1px solid black;
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+textarea {
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+  resize: none;
 }
