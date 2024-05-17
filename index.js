@@ -64,5 +64,17 @@ function deleteRow(event) {
   row.parentNode.removeChild(row);
 }
 function toggleEdit(event) {
+  var button = event.target;
+  if (button.innerText == 'Edit') {
+    button.innerText = 'Save'
+  } else {
+button.innerText = 'Edit'
+  }
+  var contentInput = button.parentNode.previousSibling.firstChild;
 
+  if (contentInput.readOnly == true) {
+    contentInput.readOnly = false;
+  } else {
+    contentInput.readOnly = true;
+  }
 }
