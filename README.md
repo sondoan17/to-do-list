@@ -1,4 +1,4 @@
-A simple to-do-list using HTML, CSS and Javascript
+#A simple to-do-list using HTML, CSS and Javascript
 
 It has 4 basic function: 
 - Add 'to-do' to the list.
