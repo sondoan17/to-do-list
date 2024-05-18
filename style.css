@@ -1,11 +1,33 @@
-table,
-tr,
-td {
+table {
   border: 1px solid black;
+  text-align: center;
+}
+td{
+  border: 1px solid red;
 }
 textarea {
   border-style: none;
   border-color: Transparent;
   overflow: auto;
   resize: none;
+  text-align: center;
+}
+textarea:focus {
+outline: none;
+}
+body{
+  text-align: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 5rem;
+}
+button{
+  width: 4.5rem;
+  height: 2.5rem;
+  padding: 5px;
+  margin: 5px;
 }
