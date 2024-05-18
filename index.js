@@ -9,13 +9,13 @@ function addNewItem() {
   var tableElement = document.querySelector("table");
   var trElement = document.createElement("tr");
   tableElement.appendChild(trElement); //  thêm thẻ tr
-  document.querySelector("table").lastChild.id = id;
+  document.querySelector("table").lastChild.classList.add('redBackground');
   var tdElement = document.createElement("td");
   var tdElement1 = document.createElement("td");
   var tdElement2 = document.createElement("td");
   var tableLastRow = document.querySelector("table").lastChild;
   tableLastRow.appendChild(tdElement);
-  tableLastRow.lastChild.id = id; //  gán id cho thẻ tr vừa thêm
+  tableLastRow.lastChild.id = id; //  gán id cho thẻ td vừa thêm
   tdElement.innerText = id; //  nhập id
   tableLastRow.appendChild(tdElement1);
   var contentInput = document.createElement("textarea");
@@ -43,8 +43,12 @@ function addNewItem() {
     .querySelector("table")
     .lastChild.lastChild.lastChild.classList.add("editButton");
   actionButtonElement2.addEventListener("click", toggleEdit);
-  actionButtonElement3.innerText = "Done"; // tạo nút hoàn thành
+  actionButtonElement3.innerText = "Finished"; // tạo nút hoàn thành
   actionValueElement.appendChild(actionButtonElement3);
+  document
+    .querySelector("table")
+    .lastChild.lastChild.lastChild.classList.add("doneButton");
+    actionButtonElement3.addEventListener("click", toggleDone);
 }
 function getValue() {
   var value = inputElement.value;
@@ -75,5 +79,21 @@ function toggleEdit(event) {
     contentInput.readOnly = false;
   } else {
     contentInput.readOnly = true;
+  }
+}
+function toggleDone(event) {
+  var button = event.target;
+  var isDone = button.parentNode.parentNode;
+  if (isDone.classList.contains('redBackground')) {
+    isDone.classList.remove('redBackground');
+    isDone.classList.add('greenBackground');
+  } else {
+    isDone.classList.remove('greenBackground');
+    isDone.classList.add('redBackground');
+  }
+  if (button.innerText == "Finished") {
+    button.innerText = "Unfinished";
+  } else {
+    button.innerText = "Finished";
   }
 }
