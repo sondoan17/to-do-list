@@ -16,11 +16,10 @@ function addNewItem() {
   var tableLastRow = document.querySelector("table").lastChild;
   tableLastRow.appendChild(tdElement);
   tableLastRow.lastChild.id = id; //  gán id cho thẻ tr vừa thêm
-  document.getElementById(id).innerText = id; //  nhập id
+  tdElement.innerText = id; //  nhập id
   tableLastRow.appendChild(tdElement1);
   var contentInput = document.createElement("textarea");
   contentInput.readOnly = true;
-  var editable = contentInput.readOnly;
   document.querySelector("table").lastChild.lastChild.appendChild(contentInput);
   contentInput.innerText = getValue(); // nhập nội dung lấy từ ô input
   tableLastRow.appendChild(tdElement2);
@@ -65,10 +64,10 @@ function deleteRow(event) {
 }
 function toggleEdit(event) {
   var button = event.target;
-  if (button.innerText == 'Edit') {
-    button.innerText = 'Save'
+  if (button.innerText == "Edit") {
+    button.innerText = "Save";
   } else {
-button.innerText = 'Edit'
+    button.innerText = "Edit";
   }
   var contentInput = button.parentNode.previousSibling.firstChild;
 
