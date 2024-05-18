@@ -4,20 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@91,200..900&family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-    <h1>To do list</h1>
-    <input type="text" id="myInput" />
-    <button id="save">Save</button>
-    <table>
-      <tr>
-        <td>ID</td>
-        <td>Content</td>
-        <td>Action</td>
-      </tr>
-    </table>
-  </div>
+      <h1 class="poetsen-one-regular">TO DO LIST</h1>
+      <div class="inputArea inconsolata">
+        <input type="text" id="myInput" />
+        <button id="save" class="inconsolata">Add</button>
+      </div>
+      <table class="inconsolata">
+        <tr class="headTR">
+          <td class="idCollumn">ID</td>
+          <td class="toDoCollumn">To do</td>
+          <td class="actionCollumn">Action</td>
+        </tr>
+      </table>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

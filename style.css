@@ -1,33 +1,86 @@
 table {
-  border: 1px solid black;
   text-align: center;
+  /* width: 15rem; */
+  height: auto;
 }
-td{
-  border: 1px solid red;
+tr {
+  margin: 0;
+}
+td {
+  border: 1px solid black;
+  padding: 0px 10px;
+  margin: 0;
+  height: auto;
 }
 textarea {
   border-style: none;
-  border-color: Transparent;
+  border-color: transparent;
   overflow: auto;
   resize: none;
   text-align: center;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: "Inconsolata", monospace;
 }
 textarea:focus {
-outline: none;
+  outline: none;
 }
-body{
+body {
   text-align: center;
+  font-size: 16px;
+  background-color: #F6EEC9;
 }
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0rem 5rem;
 }
-button{
+button {
   width: 4.5rem;
-  height: 2.5rem;
+  height: auto;
   padding: 5px;
   margin: 5px;
+}
+.redBackground {
+  background-color: #ee4e4e;
+}
+.greenBackground {
+  background-color: #a1dd70;
+}
+.idCollumn,
+.toDoCollumn,
+.actionCollumn {
+  min-width: 5rem;
+}
+.deleteButton,
+.editButton,
+.doneButton {
+  width: auto;
+  height: 1.5rem;
+  padding: 5px;
+  margin: 0px 5px;
+  font-family: "Inconsolata", monospace;
+}
+#myInput {
+  padding: 5px;
+}
+.inputArea {
+  margin-bottom: 25px;
+}
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.inconsolata {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 91;
+}
+.headTR{
+  background-color: #799351;
 }
