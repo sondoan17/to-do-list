@@ -42,6 +42,12 @@ button {
   height: auto;
   padding: 5px;
   margin: 5px;
+  border-radius: 10%;
+  border: none;
+  font-size: 1rem;
+}
+button:hover{
+  cursor: pointer;
 }
 .redBackground {
   background-color: #ee4e4e;
@@ -54,6 +60,9 @@ button {
 .actionCollumn {
   min-width: 5rem;
 }
+.addButton:hover{
+background-color: aqua;
+}
 .deleteButton,
 .editButton,
 .doneButton {
@@ -62,6 +71,7 @@ button {
   padding: 5px;
   margin: 0px 5px;
   font-family: "Inconsolata", monospace;
+  background-color: transparent;
 }
 #myInput {
   padding: 5px;
@@ -83,4 +93,7 @@ button {
 }
 .headTR{
   background-color: #799351;
+}
+i{
+  font-size: 20px;
 }
